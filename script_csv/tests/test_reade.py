@@ -1,11 +1,9 @@
-import csv
-
-from core.read import reader_file, file_print
+from core.read import reader_file
 import pytest
-
+from conftest import data
 
 def test_read_f(data):
-    result = reader_file("tests/test_file.csv")
+    result = reader_file("script_csv/tests/test_file.csv")
     assert data == result
 
 
@@ -17,5 +15,5 @@ def test_read_f(data):
     ],
 )
 def test_value_read_f(index, value):
-    result = reader_file("tests/test_file.csv")
+    result = reader_file("script_csv/tests/test_file.csv")
     assert result[index] == value
