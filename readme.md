@@ -11,7 +11,7 @@
 1. Клонируйте репозиторий и перейдите в его директорию:
 
 ```
-git clone git@github.com:AntonNovozhilov/cat_charity_fund.git
+git clone git@github.com:AntonNovozhilov/csv_script.git
 ```
 
 ```
