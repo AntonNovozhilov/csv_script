@@ -26,7 +26,14 @@ def test_filter_price_one(arg, value, data):
                 ["redmi note 12", "xiaomi", "199", "4.6"],
                 ["poco x5 pro", "xiaomi", "299", "4.4"],
             ],
-        )
+        ),
+        (
+            "price<300",
+            [
+                ["redmi note 12", "xiaomi", "199", "4.6"],
+                ["poco x5 pro", "xiaomi", "299", "4.4"],
+            ],
+        ),
     ],
 )
 def test_filter_price_two(arg, value, data):

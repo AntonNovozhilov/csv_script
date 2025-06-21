@@ -1,9 +1,15 @@
-from arguments.args import aggregate, order_by, where, name
+from arguments.args import parse_args
 from core.aggregate import file_aggregate_print
 from core.filter import file_filter_print, filter_file
 from core.order import file_order_by_print
 from core.read import file_print, reader_file
 
+
+args = parse_args()
+name = args.filename
+where = args.where
+order_by = args.order_by
+aggregate = args.aggregate
 
 def main():
     data = reader_file(name)
@@ -23,7 +29,6 @@ def main():
         file_order_by_print(data, order_by)
     else:
         file_print(data)
-
 
 if __name__ == "__main__":
     main()
